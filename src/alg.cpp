@@ -27,7 +27,7 @@ int num = 2;
       return num;
     }
     num++;
-	}
+  }
 }
 
 uint64_t nextPrime(uint64_t value) {
