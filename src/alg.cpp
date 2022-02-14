@@ -7,7 +7,8 @@ bool checkPrime(uint64_t value) {
 if (value == 1) {
     return false;
 }
-for (int i = 2; i <= sqrt(value); i++) {
+int sqrtValue = sqrt(value);
+for (int i = 2; i <= sqrtValue; i++) {
   if (value % i == 0) {
     return false;
     break;
@@ -23,10 +24,10 @@ int num = 2;
     if (checkPrime(num)) {
       i++;
     }
+    num++;
     if (n == i) {
       return num;
     }
-    num++;
   }
 }
 
@@ -43,10 +44,12 @@ uint64_t nextPrime(uint64_t value) {
 
 uint64_t sumPrime(uint64_t hbound) {
 uint64_t summ = 0;
-for (int i = 0; i < n; i++) {
-  if (checkPrime(i)) {
-    summ += i;
+int i = 0;
+  while (n > i) {
+    if (checkPrime(i)) {
+      summ += i;
+    }
+    i++;
   }
-}
 return summ;
 }
