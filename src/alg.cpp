@@ -1,6 +1,6 @@
 // Copyright 2022 NNTU-CS
+#include <cmath>
 #include <cstdint>
-#include <math.h>
 #include "alg.h"
 
 
@@ -36,7 +36,7 @@ uint64_t nextPrime(uint64_t value) {
 while (true) {
   value++;
   if (checkPrime(value))
-    return value;	
+  return value;
 }
 return value;
 }
